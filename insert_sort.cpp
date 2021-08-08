@@ -11,7 +11,7 @@ void insert_sort(datatype* a, int N)
 			{
 				tmp = a[i];
 				j = i-1;   //指向有序序列最后一个元素
-				while (tmp < a[j - 1] &&j>=0)
+				while (tmp < a[j] &&j>=0)
 				{
 					a[j+1] = a[j];  //后移一位
 					j--;
