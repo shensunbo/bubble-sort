@@ -2,21 +2,25 @@
 
 void insert_sort(datatype* a, int N)
 {
-	int tmp;
+	int tmp,j;
 	for (int i = 1; i < N; i++)
 	{
-		for (int j = i; j > 0; j--)
-		{
-			if (a[j] > a[j - 1])
-				break;
-			if (a[j] < a[j - 1])
+		
+			
+			if (a[i] < a[i - 1])
 			{
-				tmp = a[j];
-				a[j] = a[j - 1];
-				a[j - 1] = tmp;
+				tmp = a[i];
+				j = i;
+				while (tmp < a[j - 1] &&j>0)
+				{
+					a[j] = a[j - 1];
+					j--;
+				}
+				a[j] = tmp;
+
+
 
 			}
-			
-		}
+		
 	}
 }
