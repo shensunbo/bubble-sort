@@ -10,13 +10,13 @@ void insert_sort(datatype* a, int N)
 			if (a[i] < a[i - 1])
 			{
 				tmp = a[i];
-				j = i;
-				while (tmp < a[j - 1] &&j>0)
+				j = i-1;   //指向有序序列最后一个元素
+				while (tmp < a[j - 1] &&j>=0)
 				{
-					a[j] = a[j - 1];
+					a[j+1] = a[j];  //后移一位
 					j--;
 				}
-				a[j] = tmp;
+				a[j+1] = tmp; 
 
 
 
